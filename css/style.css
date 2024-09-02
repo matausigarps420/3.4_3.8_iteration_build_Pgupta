@@ -86,7 +86,11 @@ nav .content .links {
   display: flex;
   
 }
-
+nav .content .logo a img {
+  width: 230px;
+  position: relative;
+  top: 5.5px;
+}
 nav .content .links li {
   list-style: none;
   line-height: 70px;
@@ -263,7 +267,13 @@ nav .content .links li {
     gap: 1rem;
     margin-top: 1rem;
   }
-
+  .about-img img {
+    max-width: 530px;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
   .main-text h3 {
     color: var(--main-text-colour);
     font-size: 60px;
@@ -297,6 +307,15 @@ nav .content .links li {
     .about {
       grid-template-columns: 1fr;
     }
+    .about-img {
+      text-align: center;
+      order: 2;
+    }
+    .about-img img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
   }
   /* About Section End */
   /* Product Section Start */
@@ -323,7 +342,10 @@ nav .content .links li {
     border-radius: 10px;
     cursor: pointer;
   }
-
+  .row img {
+    width: 100%;
+    display: block;
+  }
   .card-body {
     padding: 10px;
   }
@@ -369,8 +391,10 @@ nav .content .links li {
   .banner {
     width: 100%;
     height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2020/05/feature-image-midnight-club.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
-    background-color: black;
   }
   .banner-content {
     text-align: center;
@@ -450,7 +474,10 @@ nav .content .links li {
     transition: 0.5s ease;
     text-align: center;
   }
-
+  .img img {
+    width: 100px;
+    border-radius: 100px;
+  }
   .review .star i {
     color: var(--main-text-colour);
     margin-top: 10px;

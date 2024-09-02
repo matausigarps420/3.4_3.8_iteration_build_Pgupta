@@ -65,7 +65,11 @@
     display: flex;
     
   }
-
+  nav .content .logo a img {
+    width: 230px;
+    position: relative;
+    top: 5.5px;
+  }
   nav .content .links li {
     list-style: none;
     line-height: 70px;
@@ -212,7 +216,7 @@
   .background-image {
     position: relative; /* Set the parent to relative to position the white box inside */
     height: 600px; /* Example height */
-    background-color: #000;
+    background: url('https://s3.amazonaws.com/speedhunters-wp-production/wp-content/uploads/2020/03/04131451/DSC00453-1200x800.jpg') no-repeat center center/cover;
     background-size: cover;
     background-position: center;
 
@@ -257,13 +261,13 @@
   }
   .card-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-template-columns: 25% 25% 25% 25%;
     align-items: center;
     gap: 1rem;
     position: relative;
     margin-top: 0.5rem;
     padding-left: 50px;
-    padding-right: 50px;
+    padding-right: 90px;
     padding-bottom: 10px;
   }
   .card-content .row {
@@ -273,7 +277,10 @@
     border-radius: 10px;
     cursor: pointer;
   }
-
+  .row img {
+    width: 100%;
+    display: block;
+  }
   .card-body {
     padding: 10px;
   }
@@ -311,9 +318,14 @@
   }
   @media (max-width: 920px) {
     .card-content {
-      grid-template-columns: 1fr;
+      grid-template-columns: 50% 50%;
+
     }
   }
+    .row{
+      height: 100%;
+    }
+
   /* Product Section End */
   footer{
     background-color: var(--secondary-color);

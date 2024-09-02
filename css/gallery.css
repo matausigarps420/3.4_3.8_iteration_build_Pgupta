@@ -16,6 +16,7 @@
   list-style: none;
   scroll-behavior: smooth;
 }
+
 html::-webkit-scrollbar-track {
   background: transparent;
 }
@@ -143,7 +144,6 @@ nav .content .links li {
   transform: translateY(-50%);
   line-height: 60px;
   width: 70px;
-
   border: none;
   outline: none;
   color: var(--main-text-colour);
@@ -251,166 +251,36 @@ nav .content .links li {
   font-family: "second-font";
   
 }
+/* Gallery Section */
 
-.gallery {
-  padding: 50px 0;
+#images {  
+  padding-top: 41px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 1rem 0;  
+  column-count: 3; 
+  column-gap: 1rem;
+  column-width: 33.33333333333333%;
+}
+.tile { 
+    transform: scale(0);
+    transition: all 350ms ease;
+}
+.scale-anm {
+  transform: scale(1);
+}
+.tile img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  
 }
 
-.gallery {
-  padding: 60px 0;
-}
-
-.gallery-grid {
-position: relative;
-width: 100%;
-height: auto; /* Adjust as needed */
-padding: 20px;
-box-sizing: border-box;
-}
-/*all images*/
-.gallery-item {
-  position: absolute;
-  background-color: #f0f0f0; /* Fallback color */
-  background-size: cover; /* Ensure the image covers the area without distortion */
-  background-position: center;
-  background-repeat: no-repeat;
-  border: 1px solid #ddd;
-}
-
-#car1 {
-background-image: url('../images/cars/car1.jpg')  ;
-top: 0;
-left: 20px;
-height: 400px; 
-width: 400px; 
-} 
-#car2 {
-  background-image: url('../images/cars/car2.jpg');
-  top: 0;
-  left: 440px;
-  height: 400px; 
-  width: 600px;  
-  }
-  
-  #car3 {
-  background-image: url('../images/cars/car3.jpg');  
-  top: 0px; /* Positioned below the first row */
-  left: 1060px;
-  height: 220px; /* Rectangle size */
-  width: 350px; 
-  }
-  
-  #car4 {
-  background-image: url('../images/cars/car4.jpg');
-  top: 420px; /* Positioned below car 4 */
-  left: 20px;
-  height: 300px; /* Rectangle size */
-  width: 500px; 
-  }
-  #car5 {
-  background-image: url('../images/cars/car5.jpg');
-  top: 420px; /* Positioned below car 4 */
-  left: 540px;
-  height: 300px; /* Rectangle size */
-  width: 500px; 
-  }
-  
-  #car6 {
-  background-image: url('../images/cars/car6.jpg');
-  top: 240px; /* Positioned below car 4 */
-  left: 1060px;
-  height: 480px; /* Rectangle size */
-  width: 350px; 
-  }
-  
-  #car7 {
-  background-image: url('../images/cars/car7.jpg');
-  top: 740px; /* Positioned below car 4 */
-  left: 20px;
-  height: 400px; /* Rectangle size */
-  width: 1390px; 
-  }
-  .project1{
-  background-image: url('../images/cars/projects/prjoect1.jpg');
-  top: 1160px;
-  left: 20px;
-  height: 440px; 
-  width: 520px; 
-  }
-  .project2{
-  background-image: url('../images/cars/projects/prjoects2.jpg');
-  top: 1160px;
-  left: 560px;
-  height: 180px; 
-  width: 850px; 
-  }
-  .project3{
-  background-image: url('../images/cars/projects/project3.jpg');
-  top: 1360px;
-  left: 560px;
-  height: 240px; 
-  width: 850px; 
-  }
-  #car8 {
-  background-image: url('../images/cars/car-9.png');
-  top: 1620px; /* Positioned below car 4 */
-  left: 1160px;
-  height: 400px; /* Rectangle size */
-  width: 250px; 
-  }
-  #car9 {
-  background-image: url('../images/cars/car-8.png');
-  top: 1620px; /* Positioned below car 4 */
-  left: 390px;
-  height: 400px; /* Rectangle size */
-  width: 750px; 
-  }  
-  #car10 {
-  background-image: url('../images/cars/car-10.png');
-  top: 1620px; /* Positioned below car 4 */
-  left: 20px;
-  height: 400px; /* Rectangle size */
-  width: 350px;  
-  }
-  #car11 {
-    background-image: url('../images/cars/car11.jpg');
-    top: 2040px; /* Positioned below car 4 */
-    left: 20px;
-    height: 400px; /* Rectangle size */
-    width: 685px; 
-    }
-    #car12 {
-    background-image: url('../images/cars/car12.jpg');
-    top: 2040px; /* Positioned below car 4 */
-    left: 725px;
-    height: 400px; /* Rectangle size */
-    width: 685px; 
-    }
-    .project4{
-      background-image: url('../images/cars/projects/project.jpg');
-      top: 2460px;
-      left: 20px;
-      height: 440px; 
-      width: 520px; 
-      }
-      .project5{
-      background-image: url('../images/cars/projects/prjoects5.jpg');
-      top: 2460px;
-      left: 560px;
-      height: 160px; 
-      width: 850px; 
-      }
-      .project6{
-      background-image: url('../images/cars/projects/prjoect6.jpg');
-      top: 2640px;
-      left: 560px;
-      height: 260px; 
-      width: 850px; 
-      }
-      
 footer{
   background-color: var(--secondary-color);
-  margin-top: 2830px;
+  position: relative;
+  bottom: 0;
 }
 .footerContainer{
   width: 95%;

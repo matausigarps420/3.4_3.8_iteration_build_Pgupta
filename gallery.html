@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Furniture Webiste</title>
+	<title>SHOPØ7</title>
 	<!-- Style Css Link -->
 	<link rel="stylesheet" href="./css/gallery.css">
 	<!-- Style Css Link -->
@@ -51,34 +51,69 @@
             <h3>Our Gallery</h3>
         </div>
     </div>
-    <section class="gallery">
+
+ <!--<div class="filter btns">
+        <button class="#" href="" data-rel="all">All</button>
+        <button class="#" data-rel="web">Websites</button>
+        <button class="#" data-rel="flyers">Flyers</button>
+        <button class="#" data-rel="bcards">Business Cards</button>
+      </div>  -->
+       
+      <div id="images">
+        <div class="tile scale-anm web all">
+              <img src="./images/cars/car1.jpg" alt="" />
+        </div>
+        <div class="tile scale-anm bcards all">
+          <img src="./images/cars/car2.jpg" alt="" />
+        </div>
+        <div class="tile scale-anm web all">
+          <img src="./images/cars/car3.jpg" alt="" />
+        </div>
+        <div class="tile scale-anm web all">
+                  <img src="./images/cars/car4.jpg" alt="" />
+        </div>
+        <div class="tile scale-anm flyers all">
+              <img src="./images/cars/car5.jpg" alt="" />
+        </div>
+        <div class="tile scale-anm bcards all">
+                  <img src="./images/cars/car6.jpg" alt="" />
+        </div>
+        <div class="tile scale-anm flyers all">
+          <img src="./images/cars/car7.jpg" alt="" />
+        </div>
+        <div class="tile scale-anm flyers all">
+          <img src="./images/cars/car-8.png" alt="" />
+        </div>
+        <div class="tile scale-anm web all">
+              <img src="./images/cars/car9.jpg" alt="" />
+        </div>
+        <div class="tile scale-anm flyers all">
+                 <img src="./images/cars/car-10.png" alt="" /> 
+        </div>
         
+        <div class="tile scale-anm bcards all">
+                  <img src="./images/cars/car12.jpg" alt="" />
+        </div>
+        <div class="tile scale-anm web all">
+             <img src="./images/cars/projects/prjoect6.jpg" alt="" /> 
+        </div>
+        <div class="tile scale-anm bcards all">
+                <img src="./images/cars/projects/project.jpg" alt="" />  
+        </div>
+        <div class="tile scale-anm web all">
+                  <img src="./images/cars/car15.jpg" alt="" />
+        </div> 
+        <div class="tile scale-anm web all">
+            <img src="./images/cars/projects/prjoect1.jpg" alt="" />  
+        </div> 
+        <div class="tile scale-anm bcards all">     
+                  <img src="./images/cars/projects/prjoects2.jpg" alt="" />
+        </div>
+       
         
-        <div class="gallery-grid">
-            <!-- Cars -->
-            <div class="gallery-item cars" id="car1"></div>
-            <div class="gallery-item cars" id="car2"></div>
-            <div class="gallery-item cars" id="car3"></div>
-            <div class="gallery-item cars" id="car4"></div>
-            <div class="gallery-item cars" id="car5"></div>
-            <div class="gallery-item cars" id="car6"></div>
-            <div class="gallery-item cars" id="car7"></div>
-            <div class="gallery-item cars" id="car8"></div>
-            <div class="gallery-item cars" id="car9"></div>
-            <div class="gallery-item cars" id="car10"></div>
-            <div class="gallery-item cars" id="car11"></div>
-            <div class="gallery-item cars" id="car12"></div>
-            
-            <!-- Projects -->
-            <div class="gallery-item projects project1"></div>
-            <div class="gallery-item projects project2"></div>
-            <div class="gallery-item projects project3"></div>
-            <div class="gallery-item projects project4"></div>
-            <div class="gallery-item projects project5"></div>
-            <div class="gallery-item projects project6"></div>
+      </div>
+      
         
-    </section>
-    
     <!-- Footer Start -->
     <footer>
 		<div class="footerContainer">
@@ -90,12 +125,12 @@
 				<a href=""><i class="fa-brands fa-youtube"></i></a>
 			</div>
 			<div class="footerNav">
-				<ul><li><a href="furindex.html">Home</a></li>
-					<li><a href="./furindex.html#about">About</a></li>
+				<ul><li><a href="index.html">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
 					<li><a href="product.html">Products</a></li>
 					<li><a href="contact.html">Contact</a></li>
 					<li><a href="gallery.html">Gallery</a></li>
-					<li><a href="./furindex.html#reviews">Reviews</a></li>
+					<li><a href="index.html#reviews">Reviews</a></li>
 				</ul>
 			</div>
 			
@@ -105,55 +140,6 @@
 		</div>
 	</footer>
 	<!-- Footer End -->
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const filterItems = document.querySelectorAll('.filter-item');
-    const galleryItems = document.querySelectorAll('.gallery-item');
 
-    filterItems.forEach(item => {
-        item.addEventListener('click', () => {
-            // Remove active class from all filter items
-            filterItems.forEach(el => el.classList.remove('active'));
-            // Add active class to clicked item
-            item.classList.add('active');
-
-            // Get filter value
-            const filterValue = item.getAttribute('data-filter');
-
-            // Remove all layout classes
-            galleryItems.forEach(el => {
-                el.classList.remove('cars-layout', 'projects-layout', 'touges-layout', 'videos-layout');
-            });
-
-            // Show/Hide gallery items and apply layout classes
-            galleryItems.forEach(el => {
-                if (filterValue === 'all') {
-                    el.classList.add('show');
-                    el.classList.remove('hide');
-                    el.parentElement.classList.remove('cars-layout', 'projects-layout', 'touges-layout', 'videos-layout');
-                } else if (el.classList.contains(filterValue)) {
-                    el.classList.add('show');
-                    el.classList.remove('hide');
-                    el.parentElement.classList.add(`${filterValue}-layout`); // Add layout class for the selected filter
-                } else {
-                    el.classList.add('hide');
-                    el.classList.remove('show');
-                }
-            });
-
-            // Scroll to top of the page
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // Smooth scroll animation
-            });
-        });
-    });
-
-    // Initially show all items and scroll to top
-    document.querySelector('.filter-item[data-filter="all"]').click();
-});
-
-</script>    
-  
 </body>
 </html>
