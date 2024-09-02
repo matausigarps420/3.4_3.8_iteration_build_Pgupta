@@ -1,0 +1,429 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	font-size: 14px;
+	background-color: #f4f4f4;
+	align-items: start;
+	min-height: 100vh;
+}
+
+.main-text h3 {
+	font-size: 60px;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--main-text-colour);
+	text-shadow: 0px 1px 1px black;
+	font-family: "second-font";
+	letter-spacing: 5px;
+}
+
+.main-text {
+	text-align: center;
+}
+
+/* Header Start */
+
+.header nav {
+	position: relative;
+	display: flex;
+	max-width: calc(100% - 200px);
+	margin: 0 auto;
+	height: 70px;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+nav .content {
+	display: flex;
+	align-items: center;
+}
+
+nav .content .links {
+	margin-left: 80px;
+	display: flex;
+
+}
+
+nav .content .links li {
+	list-style: none;
+	line-height: 70px;
+
+}
+
+.content .links li a,
+.content .links li label {
+	color: black;
+	font-size: 18px;
+	padding: 9px 17px;
+	font-weight: bold;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+
+}
+
+.content .links li label {
+	display: none;
+}
+
+/* Header End */
+.background-image {
+	position: relative;
+	/* Set the parent to relative to position the white box inside */
+	height: 500px;
+	/* Example height */
+
+	background-size: cover;
+	background-position: center;
+}
+
+/* White box styling */
+
+.main-txt {
+	text-align: center;
+	position: absolute;
+	top: 50px;
+	/* Center vertically within the white box */
+	left: 50%;
+	/* Center horizontally within the white box */
+	transform: translate(-50%, -50%);
+	/* Adjust to be centered */
+	z-index: 20;
+	/* Ensure it appears above the white box */
+	width: 100%;
+	/* Optional: Ensures the text is centered within the white box */
+	letter-spacing: 5px;
+}
+
+.main-txt h3 {
+	font-size: 45px;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--main-text-colour);
+	text-shadow: 0px 1px 1px black;
+	font-family: "second-font";
+
+}
+
+/* Contact and Map Section */
+.contact-map-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 80px;
+	background-color: #ffffff;
+}
+
+.contact-info {
+	width: 25%;
+	background-color: white;
+	padding: 10px;
+}
+
+.contact-info h4 {
+	margin-bottom: 30px;
+	color: var(--main-text-colour);
+	font-size: 1.25rem;
+	font-family: "Archivo Narrow", sans-serif;
+	color: #000000;
+	font-weight: 700;
+}
+
+.info-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	/* Increased margin to push items further apart */
+}
+
+.info-item i {
+	color: var(--main-text-colour);
+	margin-right: 15px;
+	/* Adjusted margin between icon and text */
+}
+
+.info-item p {
+	margin: 0;
+	padding-bottom: 10px;
+	/* Add padding to create space below the text */
+	font-family: "Archivo Narrow", sans-serif;
+	color: #5f5f5f;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.social-media {
+	margin-top: 20px;
+}
+
+.media-icon {
+	display: inline-block;
+	/* Ensures icons are aligned properly */
+	width: 30px;
+	/* Adjust size as needed */
+	height: 30px;
+	/* Adjust size as needed */
+	padding: 4px;
+	/* Optional: adds space between the icon and the border */
+	box-sizing: border-box;
+	/* Ensures border is included in the total size */
+	margin-right: 15px;
+	/* Space between social media icons */
+}
+
+.media-icon img {
+	width: 100%;
+	/* Makes the image fill the container */
+	height: auto;
+	/* Maintains aspect ratio */
+	display: block;
+	/* Removes bottom space in inline-block images */
+}
+
+.icon {
+	width: 50px;
+	/* Adjust the width as needed */
+	height: 50px;
+	/* Adjust the height as needed */
+	border: 2px solid #000000;
+	/* Border color and thickness */
+	padding: 4px;
+	/* Optional: add space between the icon and the border */
+	box-sizing: border-box;
+	/* Ensure border is included in the total size */
+	margin-right: 15px;
+	/* Space between icon and text */
+	display: inline-block;
+	/* Ensure icons line up with text */
+}
+
+.map-container {
+	width: 70%;
+}
+
+.map-container iframe {
+	width: 100%;
+	height: 380px;
+	border: 0;
+}
+
+/*Get in Touch/contact form*/
+.second-heading {
+	text-align: center;
+}
+
+.second-heading h2 {
+	font-family: "second-font";
+	color: var(--main-text-colour);
+	line-height: 1.3;
+	font-weight: 700;
+	font-size: 35px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin-bottom: 0;
+}
+
+.contact-form {
+	margin: 40px auto;
+	padding: 20px;
+	max-width: 800px;
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+
+.contact-form .form-row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.contact-form {
+	font-size: 1.2rem;
+	/* Increase font size for better readability */
+	padding: 20px;
+	/* Add padding for a larger form */
+	width: 100%;
+	/* Ensure the form takes up the full width of its container */
+	max-width: 1200px;
+	/* Optionally set a max-width to control the form's maximum size */
+	box-sizing: border-box;
+	/* Include padding and border in the element's total width and height */
+}
+
+.contact-form .form-row {
+	display: flex;
+	gap: 30px;
+	/* Increase gap between fields */
+	margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+	flex: 1;
+	margin-bottom: 20px;
+	/* Increase margin below fields */
+}
+
+.contact-form .form-group label {
+	display: block;
+	font-size: 1.2rem;
+	/* Increase label font size */
+	color: #000000;
+	margin-bottom: 10px;
+	/* Increase margin below labels */
+	font-weight: 700;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+	display: block;
+	width: 100%;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #5f5f5f;
+	/* Increase border thickness for a larger line */
+	font-size: 1.2rem;
+	/* Increase font size */
+	line-height: 1.6;
+	/* Adjust line height */
+	color: #495057;
+	padding: .5rem 0;
+	/* Increase padding to make fields larger */
+	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+	border-bottom: 2px var(--main-text-colour);
+	/* Optional: Change color on focus */
+	outline: none;
+	/* Remove default focus outline */
+}
+
+.contact-form .form-group textarea {
+	height: auto;
+	/* Allow for more height for textarea */
+	resize: vertical;
+	/* Allow vertical resizing */
+}
+
+.contact-form button {
+	font-size: 1.2rem;
+	/* Increase button font size */
+	background-color: var(--main-text-colour);
+	/* Button color */
+	color: #fff;
+	/* Button text color */
+	border: none;
+	border-radius: 5px;
+	/* Rounded corners for the button */
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+
+.contact-form button {
+	width: 20%;
+	padding: 10px;
+	background-color: var(--main-text-colour);
+	color: white;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-left: 40%;
+}
+
+
+footer {
+	background-color: var(--secondary-color);
+}
+
+.footerContainer {
+	width: 95%;
+	padding: 70px 30px 20px;
+}
+
+footer {
+	background-color: var(--secondary-color);
+}
+
+.footerContainer {
+	width: 95%;
+	padding: 70px 30px 20px;
+}
+
+.socialIcons {
+	display: flex;
+	justify-content: center;
+}
+
+.socialIcons a {
+	text-decoration: none;
+	padding: 10px;
+	background-color: white;
+	margin: 10px;
+	border-radius: 50%;
+}
+
+.socialIcons a i {
+	font-size: 2em;
+	color: var(--main-text-colour);
+	opacity: 0, 9;
+}
+
+/* Hover affect on social media icon */
+
+.footerNav {
+	margin: 30px 0;
+}
+
+.footerNav ul {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+}
+
+.footerNav ul li a {
+	color: black;
+	margin: 20px;
+	text-decoration: none;
+	font-size: 1.3em;
+	opacity: 0.7;
+	transition: 0.5s;
+
+}
+
+.footerBottom {
+	background-color: #000;
+	padding: 20px;
+	text-align: center;
+}
+
+.footerBottom p {
+	color: white;
+}
+
+.designer {
+	opacity: 0.7;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	margin: 0px 5px;
+}
+
+/* Footer End */
+html {
+	scroll-behavior: smooth;
+}
