@@ -98,54 +98,6 @@
          </div>
       </footer>
       <!-- Footer End -->
-      <script>
-         document.addEventListener("DOMContentLoaded", function () {
-             const filterItems = document.querySelectorAll('.filter-item');
-             const galleryItems = document.querySelectorAll('.gallery-item');
-         
-             filterItems.forEach(item => {
-                 item.addEventListener('click', () => {
-                     // Remove active class from all filter items
-                     filterItems.forEach(el => el.classList.remove('active'));
-                     // Add active class to clicked item
-                     item.classList.add('active');
-         
-                     // Get filter value
-                     const filterValue = item.getAttribute('data-filter');
-         
-                     // Remove all layout classes
-                     galleryItems.forEach(el => {
-                         el.classList.remove('cars-layout', 'projects-layout', 'touges-layout', 'videos-layout');
-                     });
-         
-                     // Show/Hide gallery items and apply layout classes
-                     galleryItems.forEach(el => {
-                         if (filterValue === 'all') {
-                             el.classList.add('show');
-                             el.classList.remove('hide');
-                             el.parentElement.classList.remove('cars-layout', 'projects-layout', 'touges-layout', 'videos-layout');
-                         } else if (el.classList.contains(filterValue)) {
-                             el.classList.add('show');
-                             el.classList.remove('hide');
-                             el.parentElement.classList.add(`${filterValue}-layout`); // Add layout class for the selected filter
-                         } else {
-                             el.classList.add('hide');
-                             el.classList.remove('show');
-                         }
-                     });
-         
-                     // Scroll to top of the page
-                     window.scrollTo({
-                         top: 0,
-                         behavior: 'smooth' // Smooth scroll animation
-                     });
-                 });
-             });
-         
-             // Initially show all items and scroll to top
-             document.querySelector('.filter-item[data-filter="all"]').click();
-         });
-         
-      </script>    
+        
    </body>
 </html>
